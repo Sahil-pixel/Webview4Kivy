@@ -12,19 +12,19 @@ GL_TEXTURE_EXTERNAL_OES = autoclass('android.opengl.GLES11Ext').GL_TEXTURE_EXTER
 
 
 
-class PreviewCallback(PythonJavaClass):
-    """
-    Interface used to get back the preview frame of the Android Camera
-    """
-    __javainterfaces__ = ('android.hardware.Camera$PreviewCallback', )
+# class PreviewCallback(PythonJavaClass):
+#     """
+#     Interface used to get back the preview frame of the Android Camera
+#     """
+#     __javainterfaces__ = ('android.hardware.Camera$PreviewCallback', )
 
-    def __init__(self, callback):
-        super(PreviewCallback, self).__init__()
-        self._callback = callback
+#     def __init__(self, callback):
+#         super(PreviewCallback, self).__init__()
+#         self._callback = callback
 
-    @java_method('([BLandroid/hardware/Camera;)V')
-    def onPreviewFrame(self, data, camera):
-        self._callback(data, camera)
+#     @java_method('([BLandroid/hardware/Camera;)V')
+#     def onPreviewFrame(self, data, camera):
+#         self._callback(data, camera)
 
  
 class GLESWebView:
